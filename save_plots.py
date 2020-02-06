@@ -24,7 +24,8 @@ def run_subplot(data, labels, filename, format=True, plot_type=1, legends=[], *a
     })
 
     # add LaTeX on python path
-    os.environ["PATH"] += os.pathsep + 'C:/Users/berkc/AppData/Local/Programs/MiKTeX 2.9/miktex/bin/x64'
+    user_name = os.getlogin()
+    os.environ["PATH"] += os.pathsep + 'C:/Users/' + user_name + '/AppData/Local/Programs/MiKTeX 2.9/miktex/bin/x64'
     print(os.getenv("PATH"))
 
     #===========================     Using LaTeX compatible fonts      =============================== #
